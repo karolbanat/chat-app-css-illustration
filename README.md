@@ -16,8 +16,8 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: [Frontend Mentor Solution Page](https://your-solution-url.com)
-- Live Site URL: [GitHub Pages Site](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/chat-app-css-illustration-JE74Th0m3J)
+- Live Site URL: [GitHub Pages Site](https://karolbanat.github.io/chat-app-css-illustration/)
 
 ## Author
 
