@@ -1,0 +1,58 @@
+@use '../base/mixins';
+@use '../base/functions';
+
+.main-background {
+	position: relative;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		/* for gradient */
+		$bg-gradient-top: functions.get-color(gradient, 400);
+		$bg-gradient-bottom: functions.get-color(gradient, 700);
+		/* size */
+		--width: 58rem;
+		--height: 101.8rem;
+
+		content: '';
+		position: absolute;
+		width: var(--width);
+		height: var(--height);
+		border-radius: var(--borr-900);
+		background-image: linear-gradient(var(--angle, 0deg), $bg-gradient-top 0%, $bg-gradient-bottom 100%);
+		z-index: -100;
+	}
+
+	/* gradient pill shape background */
+	&::before {
+		--angle: 180deg; // gradient from top to bottom
+		/* positioning */
+		--bottom: 50vh;
+		--right: 50vw;
+
+		bottom: var(--bottom);
+		right: var(--right);
+
+		@include mixins.mq(medium) {
+			--bottom: 10vh;
+			--right: 70vw;
+		}
+	}
+
+	/* gradient with opacity pill shape background */
+	&::after {
+		--angle: 0deg; // gradient from bottom to top
+		/* positioning */
+		--top: 50vh;
+		--left: 50vw;
+
+		top: var(--top);
+		left: var(--left);
+		opacity: 0.03;
+
+		@include mixins.mq(medium) {
+			--top: 10vh;
+			--left: 77.5vw;
+		}
+	}
+}

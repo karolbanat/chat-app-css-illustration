@@ -1,0 +1,33 @@
+@use '../base/functions';
+
+.phone {
+	--width: 24.7rem;
+	--height: 50.5rem;
+	$shadow-clr: functions.get-color(primary, 700);
+
+	position: relative; // for top 'panel' positioning
+	width: var(--width);
+	height: var(--height);
+	max-height: var(--height);
+	background-color: var(--clr-neutral-100);
+	border: 1rem solid var(--clr-neutral-100);
+	border-radius: var(--borr-600);
+	box-shadow: 0 3rem 6rem fade-out($shadow-clr, 0.75);
+	overflow: hidden;
+
+	// phone top 'panel'
+	&::before {
+		--width: 13rem;
+		--height: 2rem;
+
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: var(--width);
+		height: var(--height);
+		background-color: var(--clr-neutral-100);
+		border-radius: 0 0 var(--borr-450) var(--borr-450);
+	}
+}

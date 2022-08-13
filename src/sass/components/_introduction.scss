@@ -1,0 +1,42 @@
+@use '../base/mixins';
+
+.introduction {
+	display: grid;
+	justify-items: center;
+	padding: var(--spacing-rem-800) var(--spacing-rem-600);
+
+	@include mixins.mq(medium) {
+		align-items: center;
+		justify-items: start; // reset horizontal alignment
+	}
+
+	/* elements */
+	&__header {
+		text-align: center;
+
+		& > p {
+			max-width: 45ch;
+			margin-inline: auto;
+			color: var(--clr-neutral-600);
+		}
+
+		@include mixins.mq(medium) {
+			padding-left: var(--spacing-em-400);
+			text-align: initial;
+
+			& > p {
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__phone-container {
+		margin-bottom: 6.4rem;
+
+		@include mixins.mq(medium) {
+			justify-self: end; // align phone to right
+			margin-right: 11rem; // shift to the left
+			margin-bottom: 0;
+		}
+	}
+}

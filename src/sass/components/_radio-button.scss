@@ -1,0 +1,10 @@
+@use '../base/mixins';
+
+.radio-button {
+	--width: 1.2rem;
+
+	@include mixins.button-reset;
+	@include mixins.make-circle(var(--width));
+
+	border: 1px solid var(--clr-primary-400);
+}

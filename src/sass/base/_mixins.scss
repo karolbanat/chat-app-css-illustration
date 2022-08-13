@@ -7,3 +7,22 @@
 		@content;
 	}
 }
+
+@mixin button-reset {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+@mixin make-circle($width: auto) {
+	width: $width;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+@mixin arrow-pseudo-element {
+	content: '';
+	position: absolute;
+	background-color: var(--clr-neutral-100);
+	border-radius: var(--borr-900);
+}

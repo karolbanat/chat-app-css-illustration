@@ -1,0 +1,31 @@
+.message-form {
+	padding-inline: var(--spacing-rem-200);
+	padding-bottom: var(--spacing-rem-300);
+	/* align form to bottom using remaing space on top*/
+	margin-top: auto;
+
+	&__input-box {
+		position: relative; // make relative for send button
+	}
+
+	&__input {
+		padding-block: var(--spacing-em-400);
+		padding-inline: var(--spacing-em-500);
+		min-width: 100%; // stretch input
+		font-size: var(--fz-100);
+		border: none;
+		border-radius: var(--borr-900);
+
+		&::placeholder {
+			color: var(--clr-neutral-500);
+		}
+	}
+
+	&__send-button {
+		/* position send button absolutely to input-box */
+		position: absolute;
+		top: 50%;
+		right: 0.5rem;
+		transform: translateY(-45%);
+	}
+}

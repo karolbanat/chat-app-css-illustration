@@ -1,0 +1,33 @@
+@use '../base/mixins';
+
+.button-back {
+	@include mixins.button-reset;
+
+	--width: 0.4rem;
+	--height: 1.2rem;
+
+	position: relative;
+	width: var(--width);
+	height: var(--height);
+
+	/* back button arrow */
+	&::before,
+	&::after {
+		@include mixins.arrow-pseudo-element;
+		left: 50%;
+		width: 50%;
+		height: 50%;
+	}
+
+	/* top arrow part */
+	&::before {
+		top: 25%;
+		transform: translateY(-30%) rotate(30deg);
+	}
+
+	/* bottom arrow part */
+	&::after {
+		bottom: 25%;
+		transform: translateY(30%) rotate(-30deg);
+	}
+}

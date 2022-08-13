@@ -26,15 +26,15 @@
 
 <body>
 
-    <main>
+    <main class="main-background">
 
         <section class="introduction | even-columns">
-            <div>
-                <div class="phone">
+            <div class="introduction__phone-container">
+                <div class="phone introduction__phone">
                     <div class="app">
                         <div class="app__header">
                             <button aria-label="Go back"
-                                    class="back-button"></button>
+                                    class="button-back"></button>
                             <img src="./dist/images/avatar.jpg"
                                  alt="Samuel Green"
                                  class="app__avatar">
@@ -43,13 +43,13 @@
                                 <p class="app__user-status">Avalable to Walk</p>
                             </div>
                             <button aria-label="Options"
-                                    class="options-button">
+                                    class="options-button app__options-button">
                                 <span aria-hidden="true"
-                                      class="option-button__circle"></span>
+                                      class="options-button__circle"></span>
                                 <span aria-hidden="true"
-                                      class="option-button__circle"></span>
+                                      class="options-button__circle"></span>
                                 <span aria-hidden="true"
-                                      class="option-button__circle"></span>
+                                      class="options-button__circle"></span>
                             </button>
                         </div>
 
@@ -86,23 +86,25 @@
                                         role="radio"
                                         class="radio-button"></button>
                                 <label for="30-minute-walk">30 minute walk</label>
-                                <p class="price">$29</p>
+                                <p class="message__price">$29</p>
                             </div>
                             <div class="message message--left message--order">
                                 <button aria-labelledby="1-hour-walk"
                                         role="radio"
                                         class="radio-button"></button>
                                 <label for="1-hour-walk">1 hour walk</label>
-                                <p class="price">$49</p>
+                                <p class="message__price">$49</p>
                             </div>
                         </div>
                         <form class="message-form">
-                            <input aria-label="Type a message"
-                                   type="text"
-                                   placeholder="Type a message..."
-                                   class="message-form__input">
-                            <button aria-label="Send message"
-                                    class="button-send"></button>
+                            <div class="message-form__input-box">
+                                <input aria-label="Type a message"
+                                       type="text"
+                                       placeholder="Type a message..."
+                                       class="message-form__input">
+                                <button aria-label="Send message"
+                                        class="button-send message-form__send-button"></button>
+                            </div>
                         </form>
                     </div>
                 </div>

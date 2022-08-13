@@ -1,0 +1,83 @@
+@use '../base/functions';
+
+.message {
+	--max-width: 12.8rem;
+	--background: var(--bg-color, var(--clr-neutral-100));
+	--text: var(--text-color, black);
+
+	/* has min width, but maximum to --max-width */
+	width: fit-content;
+	max-width: var(--max-width);
+	/*  ---  */
+	padding-block: var(--spacing-em-300); // smaller padding because of line height
+	padding-inline: var(--spacing-em-400);
+	font-size: var(--fz-100);
+	line-height: 1.25;
+	color: var(--text);
+	background-color: var(--background);
+	border-radius: var(--borr-400);
+
+	/* elements */
+	&__picture {
+		max-width: 4rem;
+		border-radius: var(--borr-400);
+	}
+
+	&__price {
+		margin-left: auto; // alignt price to right edge
+		font-size: var(--fz-300);
+		font-weight: var(--fw-700);
+	}
+
+	/* modifiers */
+	&--left {
+		--bg-color: var(--clr-neutral-400);
+		--text-color: var(--clr-primary-500);
+
+		border-bottom-left-radius: var(--borr-200);
+	}
+
+	&--right {
+		--bg-color: var(--clr-neutral-100);
+		--text-color: var(--clr-primary-600);
+
+		margin-left: auto; // align 'message' to the right
+		border-bottom-right-radius: var(--borr-200);
+	}
+
+	&--pictures {
+		--max-width: fit-content;
+		--bg-color: transparent;
+
+		/* align pictures next to each other */
+		display: flex;
+		gap: var(--spacing-rem-200);
+		padding: 0; // remove padding from parent
+	}
+
+	&--order {
+		/* colors for gradient */
+		$bg-gradient-left: functions.get-color(gradient, 400);
+		$bg-gradient-right: functions.get-color(gradient, 700);
+
+		--max-width: 16rem;
+		--bg-color: transparent;
+		--text-color: var(--clr-neutral-100);
+
+		/* align items next to each other */
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-rem-200);
+		/*  ---  */
+		width: var(--max-width); // set width so it won't shrink due to fit-content
+		padding: var(--spacing-rem-300);
+		padding-right: var(--spacing-rem-400);
+		background-image: linear-gradient(to right, $bg-gradient-left 0%, $bg-gradient-right 100%);
+	}
+
+	/* increase margin top with message align change */
+	&--right + &--left,
+	&--left + &--right {
+		margin-top: var(--spacing-rem-400);
+	}
+}

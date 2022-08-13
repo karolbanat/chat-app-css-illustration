@@ -1,0 +1,18 @@
+@use '../base/mixins';
+
+.options-button {
+	@include mixins.button-reset;
+
+	/* align items vertically */
+	display: inline-flex;
+	flex-direction: column;
+	gap: 0.1rem;
+
+	/* small button circles */
+	&__circle {
+		--width: 0.2rem;
+		@include mixins.make-circle(var(--width));
+
+		background-color: var(--clr-neutral-100);
+	}
+}

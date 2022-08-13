@@ -3,3 +3,17 @@
 @use './base/base';
 
 @use './layout/flow';
+@use './layout/even-columns';
+
+/* buttons */
+@use './components/button-back';
+@use './components/options-button';
+@use './components/radio-button';
+@use './components/button-send';
+/* other */
+@use './components/main-background';
+@use './components/introduction';
+@use './components/phone';
+@use './components/app';
+@use './components/message';
+@use './components/message-form';

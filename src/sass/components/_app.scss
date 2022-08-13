@@ -1,0 +1,62 @@
+@use '../base/mixins';
+@use '../base/functions';
+
+.app {
+	/* display flex, so the message form is aligned to the bottom */
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	/*  */
+	background-color: var(--clr-neutral-300);
+
+	/* app header elements */
+	&__header {
+		/* get colors for gradient */
+		$bg-gradient-left: functions.get-color(gradient, 700);
+		$bg-gradient-right: functions.get-color(gradient, 400);
+
+		/* align items next to each other */
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-rem-200);
+		/*  ---  */
+		padding: {
+			top: var(--spacing-rem-600);
+			inline: var(--spacing-rem-400);
+			bottom: var(--spacing-rem-325);
+		}
+		line-height: 1.1;
+		background-image: linear-gradient(to right, $bg-gradient-left 0%, $bg-gradient-right 100%);
+	}
+
+	&__avatar {
+		--size: 2.4rem; // control avatar size
+
+		@include mixins.make-circle(var(--size)); // circle avator
+		border: 1px solid var(--clr-neutral-100);
+	}
+
+	&__user-name {
+		font-size: var(--fz-200);
+		font-weight: var(--fw-500);
+		color: var(--clr-neutral-100);
+	}
+
+	&__user-status {
+		font-size: var(--fz-100);
+		color: var(--clr-primary-300);
+	}
+
+	&__options-button {
+		margin-left: auto; // align to right edge
+	}
+
+	/* messages */
+	&__messages {
+		padding: {
+			top: var(--spacing-rem-300);
+			inline: var(--spacing-rem-200);
+			bottom: var(--spacing-rem-400);
+		}
+	}
+}
