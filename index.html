@@ -26,32 +26,97 @@
 
 <body>
 
-    Samuel Green
-    Available to Walk
+    <main>
 
-    That sounds great. I’d be happy with that.
+        <section class="introduction | even-columns">
+            <div>
+                <div class="phone">
+                    <div class="app">
+                        <div class="app__header">
+                            <button aria-label="Go back"
+                                    class="back-button"></button>
+                            <img src="./dist/images/avatar.jpg"
+                                 alt="Samuel Green"
+                                 class="app__avatar">
+                            <div class="app__user-info">
+                                <p class="app__user-name">Samuel Green</p>
+                                <p class="app__user-status">Avalable to Walk</p>
+                            </div>
+                            <button aria-label="Options"
+                                    class="options-button">
+                                <span aria-hidden="true"
+                                      class="option-button__circle"></span>
+                                <span aria-hidden="true"
+                                      class="option-button__circle"></span>
+                                <span aria-hidden="true"
+                                      class="option-button__circle"></span>
+                            </button>
+                        </div>
 
-    Could you send over some pictures of your dog, please?
+                        <div class="app__messages | flow">
+                            <div class="message message--left">
+                                <p>That sounds great. I’d be happy with that.</p>
+                            </div>
+                            <div class="message message--left">
+                                <p>Could you send over some pictures of your dog, please?</p>
+                            </div>
+                            <div class="message message--right message--pictures">
+                                <img src="./dist/images/dog-image-1.jpg"
+                                     alt="Happy dog with tongue out."
+                                     class="message__picture">
+                                <img src="./dist/images/dog-image-2.jpg"
+                                     alt="Happy dog laying on sand."
+                                     class="message__picture">
+                                <img src="./dist/images/dog-image-3.jpg"
+                                     alt="A dog with a branch in its mouth."
+                                     class="message__picture">
+                            </div>
+                            <div class="message message--right">
+                                <p>Here are a few pictures. She’s a happy girl!</p>
+                            </div>
+                            <div class="message message--right">
+                                <p>Can you make it?</p>
+                            </div>
+                            <div class="message message--left">
+                                <p>She looks so happy! The time we discussed works. How long shall I take her out for?
+                                </p>
+                            </div>
+                            <div class="message message--left message--order">
+                                <button aria-labelledby="30-minute-walk"
+                                        role="radio"
+                                        class="radio-button"></button>
+                                <label for="30-minute-walk">30 minute walk</label>
+                                <p class="price">$29</p>
+                            </div>
+                            <div class="message message--left message--order">
+                                <button aria-labelledby="1-hour-walk"
+                                        role="radio"
+                                        class="radio-button"></button>
+                                <label for="1-hour-walk">1 hour walk</label>
+                                <p class="price">$49</p>
+                            </div>
+                        </div>
+                        <form class="message-form">
+                            <input aria-label="Type a message"
+                                   type="text"
+                                   placeholder="Type a message..."
+                                   class="message-form__input">
+                            <button aria-label="Send message"
+                                    class="button-send"></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-    Here are a few pictures. She’s a happy girl!
+            <header class="introduction__header | flow">
+                <h1>Simple booking</h1>
+                <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to
+                    discuss arrangements and make bookings. Once the walk has been completed you can rate
+                    your walker and book again all through the chat.</p>
+            </header>
+        </section>
 
-    Can you make it?
-
-    She looks so happy! The time we discussed works. How long shall I take her out for?
-
-    30 minute walk
-    $29
-
-    1 hour walk
-    $49
-
-    Type a message…
-
-    Simple booking
-
-    Stay in touch with our dog walkers through the chat interface. This makes it easy to
-    discuss arrangements and make bookings. Once the walk has been completed you can rate
-    your walker and book again all through the chat.
+    </main>
 
 </body>
 
