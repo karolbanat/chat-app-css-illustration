@@ -39,4 +39,9 @@
 			margin-bottom: 0;
 		}
 	}
+
+	// exception for smaller screens
+	@media (max-width: 22rem) {
+		padding-inline: var(--spacing-rem-200);
+	}
 }

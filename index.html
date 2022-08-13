@@ -30,7 +30,7 @@
 
         <section class="introduction | even-columns">
             <div class="introduction__phone-container">
-                <div class="phone introduction__phone">
+                <div class="phone introduction__phone | pop-up-in">
                     <div class="app">
                         <div class="app__header">
                             <button aria-label="Go back"
@@ -54,13 +54,13 @@
                         </div>
 
                         <div class="app__messages | flow">
-                            <div class="message message--left">
+                            <div class="message message--left | show-message-left animation-step-1">
                                 <p>That sounds great. I’d be happy with that.</p>
                             </div>
-                            <div class="message message--left">
+                            <div class="message message--left | show-message-left animation-step-2">
                                 <p>Could you send over some pictures of your dog, please?</p>
                             </div>
-                            <div class="message message--right message--pictures">
+                            <div class="message message--right message--pictures | show-message-right animation-step-3">
                                 <img src="./dist/images/dog-image-1.jpg"
                                      alt="Happy dog with tongue out."
                                      class="message__picture">
@@ -71,24 +71,24 @@
                                      alt="A dog with a branch in its mouth."
                                      class="message__picture">
                             </div>
-                            <div class="message message--right">
+                            <div class="message message--right | show-message-right animation-step-4">
                                 <p>Here are a few pictures. She’s a happy girl!</p>
                             </div>
-                            <div class="message message--right">
+                            <div class="message message--right | show-message-right animation-step-5">
                                 <p>Can you make it?</p>
                             </div>
-                            <div class="message message--left">
+                            <div class="message message--left | show-message-left animation-step-6">
                                 <p>She looks so happy! The time we discussed works. How long shall I take her out for?
                                 </p>
                             </div>
-                            <div class="message message--left message--order">
+                            <div class="message message--left message--order | show-message-left animation-step-7">
                                 <button aria-labelledby="30-minute-walk"
                                         role="radio"
                                         class="radio-button"></button>
                                 <label for="30-minute-walk">30 minute walk</label>
                                 <p class="message__price">$29</p>
                             </div>
-                            <div class="message message--left message--order">
+                            <div class="message message--left message--order | show-message-left animation-step-7">
                                 <button aria-labelledby="1-hour-walk"
                                         role="radio"
                                         class="radio-button"></button>

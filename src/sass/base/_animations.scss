@@ -1,0 +1,64 @@
+/*  phone pop up */
+@keyframes pop-up-in {
+	0% {
+		transform: scale(0);
+	}
+
+	60% {
+		transform: scale(1.2);
+	}
+
+	80% {
+		transform: scale(0.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.pop-up-in {
+	animation: pop-up-in var(--phone-initial-duration) cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* ---  */
+
+/* message left */
+@keyframes show-message-left {
+	0% {
+		transform: scale(0);
+		transform-origin: left;
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.show-message-left {
+	animation: show-message-left var(--animation-duration) forwards;
+}
+/*  ---  */
+
+/* message right */
+@keyframes show-message-right {
+	0% {
+		transform: scale(0);
+		transform-origin: right;
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.show-message-right {
+	animation: show-message-right var(--animation-duration) forwards;
+}
+/*  ---  */
+
+/* delays */
+@for $i from 1 through 10 {
+	.animation-step-#{$i} {
+		animation-delay: calc($i * var(--animation-delay) + var(--phone-initial-duration));
+	}
+}
